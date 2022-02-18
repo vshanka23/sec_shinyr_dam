@@ -1,0 +1,7 @@
+---
+name: ASC Seurat
+category: Interactive Apps
+subcategory: Servers
+role: batch_connect
+description: |
+  This app will launch a ASC Seurat server on one or more nodes.
