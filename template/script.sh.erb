@@ -11,13 +11,8 @@ set -x
 source /opt/ohpc/pub/Software/anaconda3/etc/profile.d/conda.sh
 conda activate r_asc_seurat
 export SHELL=/bin/bash
-cd /opt/ohpc/pub/Software/asc_seurat/app
-
-# Create Shiny App launcher command
-#
-
-CMD=(R -e "shiny::runApp('/opt/ohpc/pub/Software/asc_seurat/app', host = '0.0.0.0', port = ${app_port}, launch.browser = F)")
+cd /opt/ohpc/pub/Software/ShinyR-DAM-master
 
 # Launch Shiny App
 set -x
-"${CMD[@]}"
+Rscript "app.R" ${app_port}

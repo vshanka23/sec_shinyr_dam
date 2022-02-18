@@ -88,7 +88,7 @@ def main(argv=sys.argv[1:]):
     args = parse_args(argv)
     print('authrevproxy is starting on port {} -> {}'.format(args.proxy_port,
                                                              args.app_port) )
-    dest = TokenResource('0.0.0.0', args.app_port, '')
+    dest = TokenResource('127.0.0.1', args.app_port, '')
     site = server.Site(dest)
 
     endpoint = endpoints.TCP4ServerEndpoint(reactor, args.proxy_port)

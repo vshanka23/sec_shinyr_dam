@@ -1,7 +1,7 @@
 # wait for the ASC Seurat server to start
 echo "$(date): waiting for ASC Seurat server to open port ${app_port}..."
 
-if wait_until_port_used "0.0.0.0:${port}" 120; then
+if wait_until_port_used "127.0.0.1:${port}" 120; then
     echo "$(date): discovered ASC Seurat server listening on port ${app_port}!"
 
   # wait for the authenticating proxy to start
